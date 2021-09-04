@@ -1,6 +1,6 @@
 export interface MailSenderBody {
     receiverEmail: string,
-    recieverFullname: string,
+    receiverFullname: string,
     subject: string,
     text: string,
 }

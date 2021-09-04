@@ -26,7 +26,7 @@ export class MailService {
 
             await ejs.renderFile(`${__dirname}/../../../public/MailTemplates/verification.ejs`, {
                 verificationAddress: bodyData.text,
-                fullName: bodyData.recieverFullname
+                fullName: bodyData.receiverFullname
             }, async (err: any, data: any) => {
                 if (err) reject(err)
                 else {

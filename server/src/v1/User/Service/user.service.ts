@@ -95,7 +95,7 @@ export class UserService {
             const activationUrl = `${configService.getEnv('APP_DOMAIN')}/auth/confirmation/email?token=${activateToken}`
             const mailBody: MailSenderBody = {
                 receiverEmail: dto.email,
-                recieverFullname: dto.fullName || profile.full_name,
+                receiverFullname: dto.fullName || profile.full_name,
                 subject: `Verify Your New Email [${profile.username}]`,
                 text: activationUrl,
             }
