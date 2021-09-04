@@ -58,7 +58,7 @@ export class AuthService {
 
         const mailBody: MailSenderBody = {
             receiverEmail: dto.email,
-            recieverFullname: dto.fullName,
+            receiverFullname: dto.fullName,
             subject: `Verify Your Account [${dto.username}]`,
             text: verificationUrl,
         }
@@ -146,7 +146,7 @@ export class AuthService {
 
         const mailBody: MailSenderBody = {
             receiverEmail: dto.email,
-            recieverFullname: account.full_name,
+            receiverFullname: account.full_name,
             subject: `Account Recovery [${account.username}]`,
             text: `${configService.getEnv('APP_DOMAIN')}/auth/sign-in/account-recover?email=${dto.email}&recoveryKey=${generatedKey}`,
         }
